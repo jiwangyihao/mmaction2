@@ -109,6 +109,10 @@ param_scheduler = [
 default_hooks = dict(
     checkpoint=dict(max_keep_ckpts=5), logger=dict(interval=50))
 
+optim_wrapper = dict(
+    optimizer=dict(lr=0.005, momentum=0.9, type='SGD', weight_decay=0.0001)
+)
+
 # Default setting for scaling LR automatically
 #   - `enable` means enable scaling LR automatically
 #       or not by default.
